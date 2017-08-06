@@ -1,0 +1,270 @@
+/*
+ * Roundcube webmail styles for skin "Owncloud login"
+ * 
+ * Based on the skin "Larry" for Roundcube, copyright (c) 2012,
+ * The Roundcube Dev Team, licensed under the Creative Commons 
+ * Attribution-ShareAlike License (see 
+ * http://creativecommons.org/licenses/by-sa/3.0/ for details).
+ * 
+ * Design based on the default skin of Owncloud, copyright (c) 2011,
+ * Jan-Christoph Borchardt, http://jancborchardt.net, licensed under
+ * the Affero General Public License version 3 or later (see 
+ * https://www.gnu.org/licenses/agpl-3.0.html for details).
+ */
+  
+#login-html,
+#login-body {
+	height: 100%;
+	min-height: 500px;
+}
+ 
+#login-body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	/* Gradient from ownCloud's page */
+	background: #1d2d44; /* Old browsers */
+	background: -moz-linear-gradient(top, #4c4c4c 0%, #4c4c4c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(100%,#4c4c4c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #4c4c4c 0%,#4c4c4c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #4c4c4c 0%,#4c4c4c 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #4c4c4c 0%,#4c4c4c 100%); /* IE10+ */
+	background: linear-gradient(top, #4c4c4c 0%,#4c4c4c 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#4c4c4c',GradientType=0 ); /* IE6-9 */
+}
+
+#login-form {
+	height: 100%;
+	min-height: 500px;
+	margin: 0 auto -70px;
+	width: 300px;
+}
+
+#login-form .box-inner {
+	width: inherit;
+	/* Vertical centering */
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50%;
+	min-height: 500px;
+}
+
+#login-form #logo {
+	width: 100%;
+	max-width: 269px;
+	margin-bottom: 20px;
+}
+
+/* Input fields */
+#login-form form table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#login-form table td.title {
+	display: none;
+}
+
+#login-form table td.input {
+	padding: 0;
+}
+
+#login-form form input {
+	font-size: 20px;
+	border: none;
+	border-radius: 5px;
+	margin: 5px;
+	color: #555;
+}
+
+#login-form form input:hover,
+#login-form form input:focus,
+#login-form form input:active {
+	color: #3c3c3c;
+	outline: none;
+}
+
+#login-form form input[type="text"],
+#login-form form input[type="password"] {
+
+	width: 223px;
+	padding: 12px 10px 10px 36px;
+	background-repeat: no-repeat;
+
+}
+
+#login-form form input#rcmloginuser {
+	margin-bottom: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	background-image: url("images/owncloud-login-user.svg");
+	background-position: 10px;
+}
+
+#login-form form input#rcmloginpwd {
+	margin-top: 0;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1) inset !important;
+	background-image: url("images/owncloud-login-lock.svg");
+	background-position: 5px 12px;
+}
+
+#login-form form input:-ms-input-placeholder {
+	color: #a09fa1;
+}
+
+/* Buttons */
+#login-form p.formbuttons {
+	margin: 0;
+}
+
+#login-form form input.button {
+	background: #2676A3;
+	padding: 10px 20px;
+	float: right;
+	margin: 5px 15px 5px 5px;
+	color: #DDD;
+	cursor: pointer;
+}
+
+#login-form input.button:hover,
+#login-form input.button:focus,
+#login-form input.button:active {
+	color: #FFF;
+	background: #304D76;
+}
+
+#login-form .box-bottom {
+	margin: 10px 0 0 0;
+}
+
+/* Messages */
+#message div.loading,
+#message div.warning,
+#message div.error,
+#message div.notice,
+#message div.confirmation,
+#message-objects div.notice {
+	color: #555;
+	font-weight: bold;
+	padding: 6px 30px 6px 25px;
+	display: inline-block;
+	white-space: nowrap;
+	background: url(images/messages_dark.png?v=01ee.1736) 0 5px no-repeat;
+	cursor: default;
+}
+
+#message div.warning {
+	color: #960;
+	background-position: 0 -86px;
+}
+
+#message div.error {
+	color: #cf2734;
+	background-position: 0 -55px;
+}
+
+#message div.confirmation {
+	color: #093;
+	background-position: 0 -25px;
+}
+
+#message div a,
+#message div span {
+	padding-right: 0.5em;
+	text-decoration: none;
+}
+
+#message div a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#login-form #message {
+	display: block;
+	min-height: 40px;
+	padding: 5px 25px;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+#login-form #message>div {
+	font-size: 16px;
+	background-position: 0 -83px;
+	max-width: 300px;
+	white-space: normal;
+}
+
+#login-form #message .loading {
+	color: #aaa;
+	background: url(images/ajaxloader_dark.gif?v=c252.1434) 2px 8px no-repeat;
+}
+
+#login-form .noscriptwarning {
+	width: 300px;
+}
+
+#login-body #bottomline, 
+#login-body #bottomline a {
+	font-size: 0.83rem;
+	text-align: center;
+	color: #CCC;
+	opacity: 0.6;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+#login-body #bottomline a {
+	font-weight: normal;
+}
+
+#login-body #bottomline a:hover,
+#login-body #bottomline a:focus,
+#login-body #bottomline a:active {
+	color: #FFF;
+}
+
+/* Persistent login plugin */
+#login-form #ifplcontainer {
+	text-align: left;
+	font-size: 0.8rem;
+	margin-top: 20px;
+}
+
+#login-form #ifplcontainer input[type="checkbox"] {
+	vertical-align: middle;
+	position: relative;
+	bottom: 1px;
+	margin-left: 25px;
+}
+
+#login-form #ifplcontainer label[for=_ifpl] {
+	color: #CCC;
+	opacity: 0.6;
+}
+
+#login-form #ifplcontainer label[for=_ifpl]:hover,
+#login-form #ifplcontainer label[for=_ifpl]:focus,
+#login-form #ifplcontainer label[for=_ifpl]:active {
+	opacity: 0.75;
+}
+
+#login-form #ifplcontainer input[type="checkbox"]:hover + label[for=_ifpl],
+#login-form #ifplcontainer input[type="checkbox"]:focus + label[for=_ifpl],
+#login-form #ifplcontainer input[type="checkbox"]:active + label[for=_ifpl] {
+	opacity: 0.75;
+}
+
+#login-form #ifplcontainer p {
+	color: rgb(191, 36, 49);
+	text-align: center;
+	margin: 30px 0 0 0;
+}
